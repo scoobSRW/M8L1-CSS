@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Submit Your Own Recipe!</title>
+   <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+   <h1>Submit Your Own Recipe!</h1>
+
+
+   <!-- Box for Contact Information Section -->
+   <div class="box">
+       <form action="/submit" method="post">
+           <fieldset>
+               <legend>Contact Information</legend>
+
+
+               <label for="full-name">Full Name</label>
+               <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
+
+
+               <label for="email">Email</label>
+               <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+
+               <label for="phone">Phone Number</label>
+               <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}">
+           </fieldset>
+       </form>
+   </div>
+
+
+   <!-- Box for Recipe Submission Section -->
+   <div class="box">
+       <form action="/submit" method="post">
+           <label for="message">Your Recipe:</label>
+           <textarea id="message" name="message" rows="6" cols="50" placeholder="Your recipe here" required></textarea>
+           <button type="submit">Submit</button>
+       </form>
+   </div>
+
+
+   <!-- Error Message -->
+   <div role="alert" aria-live="assertive" id="error-message" class="box">
+       <p>Please fill out all required fields.</p>
+   </div>
+
+
+   <!-- Footer -->
+   <footer class="footer-class">
+       <p>&copy; 2024 Scotty White. All rights reserved.</p>
+   </footer>
+</body>
+</html>
